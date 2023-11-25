@@ -103,6 +103,7 @@ ul {
   --spacing-2lg: 24px;
   --spacing-xl: 32px;
   --spacing-double: 40px;
+  --spacing-3lg: 48px;
   --spacing-2xl: 64px;
   --spacing-3xl: 72px;
   --spacing-regular: 80px;
@@ -285,6 +286,12 @@ ul {
     line-height: 60px;
     letter-spacing: -1.2px;
   }
+
+  .tablet\:text-sm {
+    font-size: 30px;
+    line-height: 40px;
+    letter-spacing: normal;
+  }
 }
 
 @media screen and (min-width: 1280px) {
@@ -298,6 +305,12 @@ ul {
     font-size: 60px;
     line-height: 72px;
     letter-spacing: -1.5px;
+  }
+
+  .laptop\:text-lg {
+    font-size: 48px;
+    line-height: 60px;
+    letter-spacing: -1.2px;
   }
 }
 
@@ -531,8 +544,7 @@ main {
 /* company sponsors */
 
 .company-sponsors {
-  margin-top: var(--spacing-lg);
-  margin-bottom: var(--spacing-lg);
+  padding: var(--spacing-lg) 0;
 }
 
 .company-sponsors .content {
@@ -542,16 +554,30 @@ main {
   border-color: var(--neutral-200);
 
   display: flex;
+  flex-wrap: wrap;
   flex-direction: row;
-  gap: var(--spacing-2xl);
+  gap: var(--spacing-xl) var(--spacing-2xl);
   justify-content: center;
+}
+
+@media screen and (min-width: 768px) {
+  .company-sponsors .content {
+    padding-left: var(--spacing-2xl);
+    padding-right: var(--spacing-2xl);
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .company-sponsors .content {
+    padding: var(--spacing-double) 0;
+  }
 }
 
 /* features sections */
 
 .features {
-  margin-top: var(--spacing-4xl);
-  margin-bottom: var(--spacing-4xl);
+  margin-top: var(--spacing-3lg);
+  margin-bottom: var(--spacing-3lg);
 }
 
 .features .heading {
@@ -561,18 +587,14 @@ main {
   color: var(--neutral-900);
 }
 
-.features .heading > p {
-  margin-top: var(--spacing-md);
-}
-
 .features .content {
-  margin-top: var(--spacing-2xl);
+  margin-top: var(--spacing-3lg);
 }
 
 .features .content {
   display: grid;
-  grid-template-columns: 4fr 4fr 4fr;
-  grid-gap: var(--spacing-xl);
+  grid-template-columns: 1fr;
+  grid-gap: var(--spacing-3lg);
 }
 
 .feature-item {
@@ -590,6 +612,33 @@ main {
 
 .feature-item .item-content > p {
   margin-top: var(--spacing-md);
+}
+
+@media screen and (min-width: 768px) {
+  .features {
+    margin-top: var(--spacing-regular);
+    margin-bottom: var(--spacing-regular);
+  }
+
+  .features .content {
+    grid-template-columns: 1fr 1fr;
+    grid-gap: var(--spacing-2xl) var(--spacing-xl);
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .features {
+    margin-top: var(--spacing-4xl);
+    margin-bottom: var(--spacing-4xl);
+  }
+
+  .features .content {
+    margin-top: var(--spacing-2xl);
+  }
+
+  .features .content {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 }
 
 /* testimonial */
