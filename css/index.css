@@ -725,3 +725,7 @@ main {
 .footer-all-right-reversed {
   color: var(--neutral-300);
 }
+
+.footer .nav-buttons {
+  flex-direction: column;
+}
