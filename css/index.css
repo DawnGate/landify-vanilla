@@ -99,8 +99,10 @@ ul {
   --spacing-md: 8px;
   --spacing-2md: 12px;
   --spacing-lg: 16px;
+  --spacing-normal: 20px;
   --spacing-2lg: 24px;
   --spacing-xl: 32px;
+  --spacing-double: 40px;
   --spacing-2xl: 64px;
   --spacing-3xl: 72px;
   --spacing-regular: 80px;
@@ -190,36 +192,43 @@ ul {
 .text-sm {
   font-size: 30px;
   line-height: 40px;
+  letter-spacing: normal;
 }
 
 .text-xs {
   font-size: 24px;
   line-height: 32px;
+  letter-spacing: normal;
 }
 
 .text-body-xl {
   font-size: 20px;
   line-height: 28px;
+  letter-spacing: normal;
 }
 
 .text-body-lg {
   font-size: 18px;
   line-height: 28px;
+  letter-spacing: normal;
 }
 
 .text-body-md {
   font-size: 16px;
   line-height: 24px;
+  letter-spacing: normal;
 }
 
 .text-body-sm {
   font-size: 14px;
   line-height: 20px;
+  letter-spacing: normal;
 }
 
 .text-body-xs {
   font-size: 12px;
   line-height: 16px;
+  letter-spacing: normal;
 }
 
 .btn-base {
@@ -259,7 +268,7 @@ ul {
 /* responsive */
 
 .container-max-w {
-  max-width: 365px;
+  max-width: 375px;
   padding-left: 20px;
   padding-right: 20px;
 }
@@ -270,6 +279,12 @@ ul {
     padding-left: 40px;
     padding-right: 40px;
   }
+
+  .tablet\:text-lg {
+    font-size: 48px;
+    line-height: 60px;
+    letter-spacing: -1.2px;
+  }
 }
 
 @media screen and (min-width: 1280px) {
@@ -277,6 +292,12 @@ ul {
     max-width: 1280px;
     padding-left: 32px;
     padding-right: 32px;
+  }
+
+  .laptop\:text-xl {
+    font-size: 60px;
+    line-height: 72px;
+    letter-spacing: -1.5px;
   }
 }
 
@@ -301,7 +322,7 @@ ul {
 
 main {
   min-height: 100vh;
-  background-image: url("/img/nav-bg-phone.png");
+  background-image: url("/img/nav-bg.png");
   background-repeat: no-repeat;
   background-size: contain;
   max-width: 375px;
@@ -311,12 +332,13 @@ main {
 @media screen and (min-width: 768px) {
   main {
     max-width: 768px;
+    background-image: url("/img/nav-bg-tablet.png");
   }
 }
 
 @media screen and (min-width: 1280px) {
   main {
-    background-image: url("/img/nav-bg.png");
+    background-image: url("/img/nav-bg-laptop.png");
     max-width: 1440px;
   }
 }
@@ -431,11 +453,11 @@ main {
   }
 }
 
-/* header section */
+/* hero section */
 
 .hero {
-  margin-top: var(--spacing-3xl);
-  margin-bottom: var(--spacing-3xl);
+  margin-top: var(--spacing-md);
+  margin-bottom: var(--spacing-regular);
 }
 
 .hero-container {
@@ -443,7 +465,8 @@ main {
 }
 
 .hero-content {
-  width: 648px;
+  width: 100%;
+  padding: var(--spacing-double) 0;
 }
 
 .hero-content .buttons {
@@ -451,6 +474,10 @@ main {
   display: flex;
   flex-direction: row;
   gap: var(--spacing-lg);
+}
+
+.hero-phone {
+  margin-top: var(--spacing-double);
 }
 
 .hero-phone .phone {
@@ -475,6 +502,32 @@ main {
   height: 604px;
 }
 
+@media screen and (min-width: 768px) {
+  .hero-content {
+    padding: var(--spacing-regular) 0;
+  }
+
+  .hero-phone {
+    margin-top: 0;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .hero {
+    margin-top: var(--spacing-3xl);
+    margin-bottom: var(--spacing-3xl);
+  }
+  .hero-content {
+    width: 648px;
+    padding: var(--spacing-4xl) 0;
+  }
+  .hero-container {
+    display: grid;
+    grid-template-columns: 7fr 5fr;
+    grid-gap: var(--spacing-xl);
+  }
+}
+
 /* company sponsors */
 
 .company-sponsors {
@@ -492,17 +545,6 @@ main {
   flex-direction: row;
   gap: var(--spacing-2xl);
   justify-content: center;
-}
-
-@media screen and (min-width: 768px) {
-}
-
-@media screen and (min-width: 1280px) {
-  .hero-container {
-    display: grid;
-    grid-template-columns: 7fr 5fr;
-    grid-gap: var(--spacing-xl);
-  }
 }
 
 /* features sections */
