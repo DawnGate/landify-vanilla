@@ -438,10 +438,6 @@ main {
   gap: var(--spacing-2md);
 }
 
-.btn-store-badge {
-  display: none;
-}
-
 .btn-store-title .sub {
   font-size: 8px;
   font-weight: 500;
@@ -518,10 +514,6 @@ main {
 }
 
 .hero-phone .phone {
-  margin: auto;
-}
-
-.hero-phone .phone {
   background-image: url("/img/iPhoneX.png");
   background-repeat: no-repeat;
   background-size: contain;
@@ -530,6 +522,7 @@ main {
   position: relative;
   box-shadow: var(--shadow-2xl);
   border-radius: 52px;
+  margin: auto;
 }
 
 .hero-phone .phone-screen {
@@ -612,13 +605,10 @@ main {
 }
 
 .features .content {
-  margin-top: var(--spacing-3lg);
-}
-
-.features .content {
   display: grid;
   grid-template-columns: 1fr;
   grid-gap: var(--spacing-3lg);
+  margin-top: var(--spacing-3lg);
 }
 
 .feature-item {
@@ -658,9 +648,6 @@ main {
 
   .features .content {
     margin-top: var(--spacing-2xl);
-  }
-
-  .features .content {
     grid-template-columns: 1fr 1fr 1fr;
   }
 }
@@ -1038,7 +1025,4 @@ main {
   .footer-container {
     flex-direction: row;
   }
-}
-
-@media screen and (min-width: 1280px) {
 }
