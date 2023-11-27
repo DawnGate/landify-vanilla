@@ -354,7 +354,7 @@ ul {
 
 main {
   min-height: 100vh;
-  background-image: url("/img/nav-bg.png");
+  background-image: url("../img/nav-bg.png");
   background-repeat: no-repeat;
   background-size: contain;
   max-width: 375px;
@@ -364,13 +364,13 @@ main {
 @media screen and (min-width: 768px) {
   main {
     max-width: 768px;
-    background-image: url("/img/nav-bg-tablet.png");
+    background-image: url("../img/nav-bg-tablet.png");
   }
 }
 
 @media screen and (min-width: 1280px) {
   main {
-    background-image: url("/img/nav-bg-laptop.png");
+    background-image: url("../img/nav-bg-laptop.png");
     max-width: 1440px;
   }
 }
@@ -514,7 +514,7 @@ main {
 }
 
 .hero-phone .phone {
-  background-image: url("/img/iPhoneX.png");
+  background-image: url("../img/iPhoneX.png");
   background-repeat: no-repeat;
   background-size: contain;
   width: 320px;
